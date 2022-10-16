@@ -5,18 +5,21 @@ This repo will be utilized to study and predict markets.
 ## Data Gathering
 
 Historical and live market data will be gathered and processed in
-dataCollector.py which will then be written to  data/[market]
+dataCollector.py
 
 ## Graphing
 
 Matplotlib
 
-## ML Model
+## Reporting
+
+Discord bot posts stocks with personal interest to me daily
+
+Discord bot responds to calls starting with 'c^' see botCommands.txt for full documentation
 
 LSTM algorithm
 Make decision on pyTorch or tensorFLow
 
 ## Future (potential) features
 
-- Discord bot integration
 - ColtenCodes.com website integration

@@ -29,18 +29,18 @@ def writeAverages(df):
     highestHigh = df['high'].astype(float).max()
     lowestLow = df['high'].astype(float).min()
     delta = highestHigh - lowestLow
-    dateHigh = df.loc[df['high'].idxmax(), 'date']
-    dateLow = df.loc[df['low'].idxmin(), 'date']
-    profit = delta if dateHigh > dateLow else delta * -1
+    #dateHigh = df.loc[df['high'].idxmax(), 'date']
+    #dateLow = df.loc[df['low'].idxmin(), 'date']
+    #profit = delta if dateHigh > dateLow else delta * -1
     netPercentage = df.iloc[0]['open']
 
-    print('Maximum profit/loss if purchased at peak/valley times:', profit)
+    #print('Maximum profit/loss if purchased at peak/valley times:', profit)
     print('------------------------------------High over 30 days:', highestHigh)
     print('-------------------------------------Low over 30 days:', lowestLow)
 
 def writeFilesToCSV(df,symbol):
     """
-    Conver Epoch time to human readable and write to CSV
+    Convert Epoch time to human readable and write to CSV
     """
     df['date'] = df['date'].apply(lambda t : time.strftime("%Y-%m-%d %H:%M:%S", time.gmtime(t/1000)))
     path = "./data/crypto/" + symbol + "-" + datetime.now().strftime("%Y-%m-%d") + ".csv"
